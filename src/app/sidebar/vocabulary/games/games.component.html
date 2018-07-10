@@ -1,0 +1,49 @@
+<app-navbarex></app-navbarex>
+<!--Navbar End-->
+
+<!--Container Start-->
+<div class="container-fluid">
+    <div class="row row-offcanvas row-offcanvas-left">
+
+<!--Sidebar Start-->        
+<app-sidebarex></app-sidebarex>
+<!--Sidebar End--> 
+
+<!--Content container-->
+<div class="col-xs-12 col-sm-9 mainpage" style= " margin-top: 5%;margin-bottom: 5%;">
+
+    <!-- Container -->
+
+    <h5 class="latest-text w3_latest_text" style="text-align: left;">Listening / Be a Lyricist</h5>
+
+    <!-- <div class="col-sm-2"></div> -->
+
+
+
+
+    <div class="col-sm-3">
+            <textarea id="comments" cols="24" rows="13" placeholder="Subtitle" class="common"></textarea>
+    </div>
+
+    <div class="col-sm-6">
+
+
+        <div class="embed-responsive embed-responsive-16by9">
+            <video  width="400" controls (click)="toggleVideo()" #videoPlayer>
+                <source src="../assets/videos/paragraph.mp4" type="video/mp4" />
+                Browser not supported
+            </video>
+        </div>
+        <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#model1" data-dismiss="collapse">Compare Text</button> 
+      </div>  
+      <div class="col-sm-3">
+            <textarea id="comments" cols="24" rows="13" placeholder="Edit Here" class="common"></textarea>
+
+      </div>
+
+    
+</div>
+
+</div>
+
+</div>

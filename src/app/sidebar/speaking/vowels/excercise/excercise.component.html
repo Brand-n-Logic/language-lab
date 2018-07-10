@@ -1,0 +1,81 @@
+
+
+<h1>Dummy Text Here</h1>
+
+<p>Subhas Chandra Bose (23 January 1897 – 18 August 1945)
+  was an Indian nationalist whose defiant patriotism made him a hero in India</p> 
+  
+
+<p>*** Read the above mentioned text while you have to start the button</p>
+
+<header style="text-align: center;">
+    <h1>
+       | Audio Recording |
+    </h1>
+
+
+</header>
+
+
+<section class="experiment recordrtc">
+    <h2 class="header" style="margin: 0;">
+        <select class="recording-media">
+          
+
+            <option value="record-audio">Microphone</option>
+                            </select>
+
+        <span style="font-size: 15px;">into</span>
+
+        <select class="media-container-format">
+          
+            <option>opus</option>
+            <option>pcm</option>
+  <option>ogg</option>
+            
+        </select>
+
+        <br>
+
+        <button id="btn-start-recording">Start Recording</button>
+        <button id="btn-pause-recording" style="display: none; font-size: 15px;">Pause</button>
+
+        <hr style="border-top: 0;border-bottom: 1px solid rgb(189, 189, 189);margin: 4px -12px;margin-top: 8px;">
+      
+
+
+        <select class="media-framerates">
+            <option value="default">Default framerates</option>
+            <option value="5">5 fps</option>
+            <option value="15">15 fps</option>
+            <option value="24">24 fps</option>
+            <option value="30">30 fps</option>
+            <option value="60">60 fps</option>
+        </select>
+
+
+        <select class="media-bitrates">
+            <option value="default">Default bitrates</option>
+            <option value="8000000000">1 GB bps</option>
+            <option value="800000000">100 MB bps</option>
+            <option value="8000000">1 MB bps</option>
+            <option value="800000">100 KB bps</option>
+            <option value="8000">1 KB bps</option>
+            <option value="800">100 Bytes bps</option>
+        </select>
+    </h2>
+
+    <div style="text-align: center; display: none;">
+        <button id="save-to-disk">Save To Disk</button>
+     
+    </div>
+
+    <div style="margin-top: 10px;" id="recording-player"></div>
+</section>
+
+
+
+
+
+
+  

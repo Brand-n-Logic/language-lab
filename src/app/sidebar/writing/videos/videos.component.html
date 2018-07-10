@@ -1,0 +1,82 @@
+
+
+<app-navbarex></app-navbarex>
+<!--Navbar End-->
+
+<!--Container Start-->
+<div class="container-fluid">
+    <div class="row row-offcanvas row-offcanvas-left">
+
+<!--Sidebar Start-->        
+<app-sidebarex></app-sidebarex>
+<!--Sidebar End--> 
+
+<!--Content container-->
+<div class="col-xs-12 col-sm-8 mainpage" style= " margin-top: 5%;margin-bottom: 5%;">
+
+    <h5 class="latest-text w3_latest_text" style="text-align: left;">Writing/Paragraph-Video</h5>
+
+
+      <div class="col-sm-3"></div>
+      <div class="col-sm-7">
+
+          <div class="embed-responsive embed-responsive-16by9">
+          <video  width="400" controls (click)="toggleVideo()" #videoPlayer>
+              <source src="../assets/videos/paragraph.mp4" type="video/mp4" />
+              Browser not supported
+          </video>
+      </div>
+      </div>
+      <div class="col-sm-3"></div> 
+
+
+      <div class="col-sm-3"></div> 
+
+
+      <div  class="col-sm-7">
+        <h5 class="latest-text w3_latest_text" style="margin-top:1%;text-align: left;">Writinging Topic / ParagraphWriting-Assessment</h5>
+        <div class="col-sm-4">
+        <div class="card">
+            <div class="card-image">
+                <img class="img-responsive" 
+                     src="http://faberwritingacademy.com.au/images/St_AlbansWritersFestival_FeaturedImage.jpg">
+            </div>
+            <div class="card-content">
+              MCQ
+            </div>
+        </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+        <div class="card-image">
+            <img class="img-responsive" 
+                 src="http://faberwritingacademy.com.au/images/St_AlbansWritersFestival_FeaturedImage.jpg">
+        </div>
+        <div class="card-content">
+          True-False
+        </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+        <div class="card-image">
+            <img class="img-responsive" 
+                 src="http://faberwritingacademy.com.au/images/St_AlbansWritersFestival_FeaturedImage.jpg">
+        </div>
+        <div class="card-content">
+          Q & A
+        </div>
+    </div>
+  </div>
+      </div>
+    
+    
+</div>
+    
+  </div>    
+
+  <!-- .end-->
+
+
+    
+        </div>

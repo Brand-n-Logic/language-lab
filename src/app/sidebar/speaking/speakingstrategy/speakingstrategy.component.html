@@ -1,0 +1,42 @@
+
+
+<!--Navbar Start -->
+<app-navbarex></app-navbarex>
+<!--Navbar End-->
+
+<!--Container Start-->
+<div class="container-fluid">
+    <div class="row row-offcanvas row-offcanvas-left">
+
+<!--Sidebar Start-->        
+<app-sidebarex></app-sidebarex>
+<!--Sidebar End--> 
+
+<!--Content container-->
+<div class="col-xs-12 col-sm-9 mainpage" style= " margin-top: 5%;margin-bottom: 5%;">
+
+    <!-- Container -->
+    <h5 class="latest-text w3_latest_text" style="text-align: left;">Speaking Strategy</h5>
+
+
+<div class="col-sm-3 col-lg-3"></div>
+
+      <div class="col-sm-6 col-lg-6">
+
+        <div class="embed-responsive embed-responsive-4by3">
+            <video  width="400" controls (click)="toggleVideo()" #videoPlayer>
+                <source src="../assets/videos/speaking.mp4" type="video/mp4" />
+                Browser not supported
+            </video>
+        </div>
+      </div>  
+      <div class="col-sm-3 col-lg-3"></div>     
+           
+    </div>
+
+    <!--Content End-->
+    
+        </div>
+    </div>
+    
+    <!--Container End-->                               

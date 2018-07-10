@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>LanguageLab</title>
+<base href="/">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" 
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+        
+        <link rel="stylesheet" id="font-awesome-css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css" media="screen">        
+        <link rel="stylesheet" href="../src/assets/css/mediaelement.css">
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    </head>
+<body>
+  <app-root></app-root>
+</body>
+<script src="//lab.subinsb.com/projects/jquery/core/jquery-2.1.1.js"></script>
+<!-- <script src="//lab.subinsb.com/projects/jquery/voice/recorder.js"></script>
+<script src="//lab.subinsb.com/projects/jquery/voice/jquery.voice.min.js"></script>
+<script src="https://demos.subinsb.com/Francium/voice/assets/record.js"></script> -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- Bootstrap Js CDN -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+
+  <script>
+        $(document).ready(function() {
+	$('#myCarousel').carousel({
+	interval: 5000
+	})
+    
+    $('#myCarousel').on('slid.bs.carousel', function() {
+    	//alert("slid");
+	});
+    
+    
+});
+
+
+        </script>
+
+
+<!-- This is for recording audio file --> 
+
+
+
+
+
+<script>
+    var txt = $('#comments'),
+        hiddenDiv = $(document.createElement('div')),
+        content = null;
+    
+    hiddenDiv.addClass('hiddendiv common');
+    
+    $('body').append(hiddenDiv);
+    
+    txt.on('keyup', function () {
+    
+        content = $(this).val();
+    
+        content = content.replace(/\n/g, '<br>');
+        hiddenDiv.html(content + '<br class="lbr">');
+    
+        $(this).css('height', hiddenDiv.height());
+    
+    });
+
+
+</script>
+
+
+<!--Upload Video  web Script-->
+
+
+
+<script>$(document).ready(function(){
+	var showFormButton = $('.formButton').find('button');
+	var inputForm = $('.videoForm');
+	var inputFormButton = inputForm.find('button');
+	var videoOut = $('.videoViewing');
+	showFormButton.on('click', function(){
+		$.ajax('https://codepen.io/jon-is-learning/pen/KddaEZ.html', {
+			success: function(result){
+				console.log("You did it!");
+				showFormButton.hide();
+				inputForm.html(result)
+			}
+		})
+	})
+	inputFormButton.on('submit', function(event){
+		event.preventDefault();
+		$.ajax('https://codepen.io/jon-is-learning/pen/qOOmgo.html', {
+			data: form.serialize(),
+			success: function(formData){
+				$('.title').find(h1).text(formData.videoTitle)
+				videoOut.html(formData)
+			}
+		})
+	})
+})
+</script>
+
+
+<!-- Toggle Button Script -->
+
+<script>
+$(document).ready(function() { 
+     $('.content').slideUp(0);
+     $('.content1').slideDown(0);
+   });
+   
+   var test, name, kategoria;
+   
+   $('.toggle').click(function(){
+       $('.content').slideUp("fast");
+           test = this.getAttribute('id');
+         name = 'content' + test;
+       setTimeout(ChangeCategory,300);
+   });
+   
+   function ChangeCategory() {
+         kategoria = document.getElementById(name);
+         $('.'+name).slideDown("fast");
+   };
+</script>
+
+<script>
+let buttonPlay = document.getElementById('buttonPlay');
+let buttonRecord = document.getElementById('buttonRecord');
+let buttonPause = document.getElementById('buttonPause');
+let trackHolder = document.getElementById('trackHolder');
+let templateTrack = document.getElementById('templateTrack');
+
+let isPlayingAll = false;
+
+const app = function(stream) {
+    let mediaRecorder = new MediaRecorder(stream);
+    let chunks = [];
+
+    let startRecord = function() {
+        mediaRecorder.start();
+    };
+    
+    let stopRecord = function() {
+        mediaRecorder.stop();
+    };
+
+    mediaRecorder.ondataavailable = function(e) {
+        chunks.push(e.data);
+    }
+
+    mediaRecorder.onstop = function(e) {
+        let blob = new Blob(chunks, {
+            'type' : 'audio/ogg; codecs=opus',
+        });
+        
+        chunks = [];
+
+        addTrack(blob);
+    };
+
+    // bind actions
+    buttonPlay.onclick = function() {
+        buttonPlay.disabled = true;
+        buttonRecord.disabled = true;
+        buttonPause.disabled = false;
+
+        document.querySelectorAll('audio').forEach(audio => {
+            audio.play();
+        });
+
+        isPlayingAll = true;
+    };
+
+    buttonRecord.onclick = function() {
+        buttonPlay.disabled = true;
+        buttonRecord.disabled = true;
+        buttonPause.disabled = false;
+
+        startRecord();
+    };
+
+    buttonPause.onclick = function() {
+        buttonPlay.disabled = false;
+        buttonRecord.disabled = false;
+        buttonPause.disabled = true;
+
+        if (isPlayingAll) {
+            document.querySelectorAll('audio').forEach(audio => {
+                audio.pause();
+            });
+        } else {
+            stopRecord();
+        }
+    };
+};
+
+const addTrack = function(blob) {
+    let template = templateTrack.content.cloneNode(true);
+    let templateAudio = template.querySelector('audio');
+    let templatePlay = template.querySelector('.track__button--play');
+    let templatePause = template.querySelector('.track__button--pause');
+    let templateRemove = template.querySelector('.track__button--remove');
+
+    templateAudio.src = URL.createObjectURL(blob);
+
+    templatePlay.onclick = function() {
+        templatePlay.disabled = true;
+        templatePause.disabled = false;
+
+        templateAudio.play();
+    };
+
+    templatePause.onclick = function() {
+        templatePlay.disabled = false;
+        templatePause.disabled = true;
+
+        templateAudio.pause();
+    };
+
+    templateRemove.onclick = function(e) {
+        e.target.closest('.track').remove();
+    };
+
+    trackHolder.appendChild(template);
+}
+
+navigator.mediaDevices
+    .getUserMedia({ audio: true })
+    .then(app);
+</script>
+
+</html>

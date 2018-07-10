@@ -1,0 +1,44 @@
+<!--Navbar Start -->
+<app-navbarex></app-navbarex>
+<!--Navbar End-->
+
+<!--Container Start-->
+<div class="container-fluid">
+    <div class="row row-offcanvas row-offcanvas-left">
+
+<!--Sidebar Start-->        
+<app-sidebarex></app-sidebarex>
+<!--Sidebar End--> 
+
+
+<!--Content container-->
+<div class="col-xs-12 col-sm-9 mainpage" style= "margin-top: 5%;margin-bottom: 5%;">
+ <h5 class="latest-text w3_latest_text" style="text-align: left;">CreamsonContent - Prose List</h5>
+                                <!-- Container -->
+
+                                <li  *ngFor ="let joke of GetContentlists"> 
+                                        <a [routerLink]="['/getContent/cid', joke.content_id]" >
+                                        <div class="col-sm-3">
+                                                <div class="card">
+                                                    <div class="card-image">
+                                                <img class="img-responsive" src="{{joke.image_url}}">
+                                                    </div>                  
+                                            
+                                                    <div class="card-content">
+                                                    <p>{{joke.prose_name}}</p>
+                                                    </div>
+                                            </div>
+                                            </div> 
+                                            </a>
+                                    </li>
+                
+               
+  
+    </div>
+
+    <!--Content End-->
+    
+        </div>
+    </div>
+    
+    <!--Container End-->                               

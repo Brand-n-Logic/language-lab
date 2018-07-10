@@ -1,0 +1,164 @@
+<!--Navbar Start -->
+<app-navbarex></app-navbarex>
+<!--Navbar End-->
+
+<!--Container Start-->
+<div class="container-fluid">
+   
+        <div class="row row-offcanvas row-offcanvas-left">
+
+<!--Sidebar Start-->        
+<app-sidebarex></app-sidebarex>
+<!--Sidebar End--> 
+
+
+<!--Content container-->
+<div class="col-xs-12 col-sm-9 mainpage" style= "margin-top: 10%;margin-bottom: 10%;">
+        
+        <h5 class="latest-text w3_latest_text" style="text-align: left;">CreamsonContent</h5>
+    <!-- Container -->
+
+
+
+<!-- Card Projects -->
+<li  *ngFor ="let Getcontentypelist of Getcontentypelists"> 
+
+<!-- <a data-toggle="modal" (click)="fetchcontentfromtype(Getcontentypelist.id)" > -->
+<a [routerLink]="['/getContentList/id', Getcontentypelist.id]" >
+<div class="col-sm-3">
+<div class="card">
+<div class="card-image">
+<img class="img-responsive" src="{{Getcontentypelist.image_url}}">
+</div>
+<div class="card-content">{{Getcontentypelist.type_name}}</div>                    
+</div>
+</div>
+</a>
+</li>
+
+                                <!-- Container -->
+
+      
+      
+          <!-- Card Projects -->
+         
+
+        
+            
+      
+                              <!-- /Card Projects -->
+
+                              <!-- .modal for Content Contain from File-->
+      
+      <!-- <div class="modal fade" 
+            id="myModal1" 
+            tabindex="-1" 
+            role="dialog" 
+            aria-labelledby="myModal1Label" 
+            aria-hidden="true">
+      
+      <div class="modal-dialog">
+      <div class="modal-content">
+      <div class="modal-body">
+          <h3>Prose File</h3>
+          <p>You are Going to Prose File</p>
+      </div>
+      <div class="modal-footer">
+          <a routerLink="/ProseContent">
+              <button class="btn btn-default" data-dismiss="modal">
+                  More
+              </button>
+          </a>
+      </div>
+      </div> -->
+                      <!-- /.modal-content -->
+      <!-- </div> -->
+      
+                      <!-- /.modal-dialog-->
+      <!-- </div> -->
+      
+                      <!-- /.modal for Content Contain from File-->
+      
+      
+      
+      
+      
+                      <!-- .modal for Web Content-->
+      
+            <!-- <div  class="modal fade" 
+                  id="myModal2" 
+                  tabindex="-1" 
+                  role="dialog" 
+                  aria-labelledby="myModal2Label" 
+                  aria-hidden="true">
+          
+          <div class="modal-dialog">
+          <div class="modal-content">
+          <div class="modal-body">
+          <h3> Poetry File</h3>
+          <p>laboriosam dignissimos eum incidunt blanditiis . Demo text</p>
+          </div>
+          <div class="modal-footer">
+          <a routerLink="/CreamsonContent">
+          <button class="btn btn-default" data-dismiss="modal">
+          More
+          </button>
+          </a>
+          </div>
+          </div> -->
+          
+          <!-- /.modal-content -->
+          <!-- </div> -->
+          
+          <!-- /.modal-dialog-->
+          
+          <!-- </div> -->
+      
+          <!-- /.modal for Web Content-->
+
+
+
+      
+          <!-- .modal for Creamson Content-->
+      
+              <!-- <div class="modal fade" 
+                    id="myModal3" 
+                    tabindex="-1" 
+                    role="dialog" 
+                    aria-labelledby="myModal3Label" 
+                    aria-hidden="true">
+              
+              <div class="modal-dialog">
+              <div class="modal-content">
+              <div class="modal-body">
+              <h3> Drama</h3>
+              <p>laboriosam dignissimos eum incidunt blanditiis . Demo text</p>
+              </div>
+              <div class="modal-footer">
+              <a routerLink="/CreamsonContent">
+              <button class="btn btn-default" data-dismiss="modal">
+              More
+              </button>
+              </a>
+              </div>
+              </div> -->
+              
+              <!-- /.modal-content -->
+              <!-- </div> -->
+              
+              <!-- /.modal-dialog-->
+              
+              <!-- </div> -->
+          
+              <!-- /.modal for Creamson Content-->
+
+          
+          
+            </div>
+
+            <!--Content End-->
+            
+                </div>
+            </div>
+            
+            <!--Container End-->                               

@@ -1,0 +1,17 @@
+input{
+    padding: 15px 32px;
+    border-radius: 33px;
+    font-size: 16px;
+    background-color: #C70039;
+    border: none;
+    color: white;
+    margin-right:5%;
+  }
+  input:hover {
+    padding: 15px 32px;
+    border-radius: 33px;
+    font-size: 16px;
+    background-color: rgb(18, 250, 18);
+    border: none;
+    color: white
+  }

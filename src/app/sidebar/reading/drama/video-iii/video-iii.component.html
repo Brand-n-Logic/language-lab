@@ -1,0 +1,42 @@
+
+
+<app-navbarex></app-navbarex>
+<!--Navbar End-->
+
+<!--Container Start-->
+<div class="container-fluid">
+    <div class="row row-offcanvas row-offcanvas-left">
+
+<!--Sidebar Start-->        
+<app-sidebarex></app-sidebarex>
+<!--Sidebar End--> 
+
+<!--Content container-->
+<div class="col-xs-12 col-sm-8 mainpage" style= " margin-top: 5%;margin-bottom: 5%;">
+
+    <h5 class="latest-text w3_latest_text" style="text-align: left;">Drama/ After Blenheim </h5>
+
+
+
+      <div class="col-sm-3"></div>
+      <div class="col-sm-9">
+         
+          <div class="embed-responsive embed-responsive-16by9">
+          <video  width="400" controls (click)="toggleVideo()" #videoPlayer>
+              <source src="../assets/videos/afterblenheim.mp4" type="video/mp4" />
+              Browser not supported
+          </video>
+      </div>
+      </div>
+    </div>
+    
+    
+
+    
+  </div>    
+
+  <!-- .end-->
+
+
+    
+        </div>

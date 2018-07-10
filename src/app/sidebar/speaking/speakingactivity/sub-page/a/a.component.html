@@ -1,0 +1,61 @@
+
+
+<!--Navbar Start -->
+<app-navbarex></app-navbarex>
+<!--Navbar End-->
+
+<!--Container Start-->
+<div class="container-fluid">
+    <div class="row row-offcanvas row-offcanvas-left">
+
+<!--Sidebar Start-->        
+<app-sidebarex></app-sidebarex>
+<!--Sidebar End--> 
+
+<!--Content container-->
+<div class="col-xs-12 col-sm-9 mainpage" style= " margin-top: 5%;margin-bottom: 5%;">
+
+    <!-- Container -->
+    <h5 class="latest-text w3_latest_text" style="text-align: left;">Speaking-Activity /Conversations </h5>
+
+<!-- <div class="col-sm-2"></div> -->
+      <div class="col-sm-6" >
+          
+
+        <div class="embed-responsive embed-responsive-16by9">
+            <video  width="1000" controls (click)="toggleVideo()" #videoPlayer>
+                <source src="../assets/videos/pcd.mp4" type="video/mp4" />
+                Browser not supported
+            </video>
+        </div>
+      </div>  
+      <div class="col-sm-6">
+        <app-audio-rec></app-audio-rec>
+  </div>
+
+
+  <div class="col-sm-12" style= "margin-top: 3%;margin-bottom: 3%;">
+
+  <div class="col-sm-6">
+      <h6 style="color:rgb(60, 16, 255);">Intelli</h6>
+        <textarea id="comments" placeholder="Subtitle Will Come Here" class="common"></textarea>
+        <div class="action">
+          <input type="submit" value="Show Subtitle"/>
+        </div>
+        </div>
+        <!-- <div class="col-sm-2"></div> -->
+        <div class="col-sm-6"> 
+                <h6 style="color:rgb(60, 16, 255);">User</h6>
+                <textarea id="comments" placeholder="Write Here" class="common"></textarea> 
+        </div>
+      </div>
+
+      
+</div>
+
+<!--Content End-->
+
+</div>
+</div>
+
+<!--Container End-->
