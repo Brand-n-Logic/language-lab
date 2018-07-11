@@ -51,7 +51,7 @@ import { IntgrammarComponent } from './sidebar/grammar/maingrammarcontainer/intg
 import { ContentfileComponent } from './sidebar/content/contentfile/contentfile.component';
 import { WebcontentComponent } from './sidebar/content/webcontent/webcontent.component';
 import { DemoproseComponent } from './sidebar/content/creamsoncontent/prosecontent/demoprose/demoprose.component';
-import { SelfassesmentComponent } from './sidebar/content/selfassesment/selfassesment.component';
+
 import { CrosswordComponent } from './sidebar/content/crossword/crossword.component';
 import { McqComponent } from './sidebar/content/mcq/mcq.component';
 import { UnseenComponent } from './sidebar/reading/unseen/unseen.component';
@@ -81,6 +81,8 @@ import { TfComponent } from './sidebar/content/tf/tf.component';
 import { MatchthefollowingComponent } from './sidebar/content/matchthefollowing/matchthefollowing.component';
 import { FilltheblanksComponent } from './sidebar/content/filltheblanks/filltheblanks.component';
 
+import { SelfassesmentComponent } from './selfassesment/selfassesment.component';
+import { MyactivityComponent } from './myactivity/myactivity.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full'},
@@ -175,7 +177,8 @@ const routes: Routes = [
           { path: 'getContent/cid/1/tf',                  component: TfComponent},
           { path: 'getContent/cid/1/fib',                  component: FilltheblanksComponent},
           { path: 'getContent/cid/1/mtf',                  component: MatchthefollowingComponent},
-          { path: 'Letsspeak',            component: LetsspeakComponent}
+          { path: 'Letsspeak',            component: LetsspeakComponent},
+          { path: 'Myactivity',            component: MyactivityComponent}
 
           
           ];
@@ -251,7 +254,8 @@ const routes: Routes = [
     TfComponent,
     MatchthefollowingComponent,
     FilltheblanksComponent,
-    AComponent
+    AComponent,
+    MyactivityComponent
   ],
   imports: [
     BrowserModule,

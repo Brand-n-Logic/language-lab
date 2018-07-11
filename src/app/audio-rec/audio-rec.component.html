@@ -1,19 +1,24 @@
 <div class="app">
     <div class="actions-holder">
-        <button id="buttonPlay" class="button button--play" disabled></button>
-        <button id="buttonRecord" class="button button--record"></button>
-        <button id="buttonPause" class="button button--pause" disabled></button>
+        <button  id="buttonPlay" class="button button--play" disabled></button>
+        <button (click)="recordAudio()" id="buttonRecord" class="button button--record"></button>
+        <button (click)="stopAudio()" id="buttonPause" class="button button--pause" disabled></button>
     </div>
 
     <div id="trackHolder" class="tracks"></div>
 </div>
+
+<script>
+    let d = new Date();
+    alert("Today's date is " + d);
+</script>
 
 <template id="templateTrack">
     <div class="track">
         <audio controls loop></audio>
 
         <div class="track__actions">
-            <button class="track__button track__button--play"></button>
+            <button  class="track__button track__button--play"></button>
             <button class="track__button track__button--pause" disabled></button>
         </div>
 
