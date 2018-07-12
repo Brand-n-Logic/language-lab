@@ -14,15 +14,20 @@
 
     <!-- Container -->
 
-    <h5 class="latest-text w3_latest_text" style="text-align: left;">Listening / Be a Lyricist</h5>
-
+    <h5 class="latest-text w3_latest_text"  style="text-align: left;" >Listening / Be a Lyricist </h5>
+<h5 class="latest-text w3_latest_text" *ngIf="error !== ''" style="text-align: left;" role="alert">{{error}}</h5>
     <!-- <div class="col-sm-2"></div> -->
 
 
+    <form  (submit)="match($event)">
 
+        <!-- <div style="color: red;" *ngIf="error !== ''"class="form-message" role="alert"> {{error}}</div> -->
 
     <div class="col-sm-3">
-            <textarea id="comments" cols="24" rows="13" placeholder="Subtitle" class="common"></textarea>
+        <div id="contact-form">
+            <!-- <input type="text"  name="subtitle" placeholder="Subtitle"  [(ngModel)] = "subtitle"> -->
+            <textarea rows="1" name="subtitle"  [(ngModel)] = "subtitle"></textarea>
+        </div>
     </div>
 
     <div class="col-sm-6">
@@ -34,13 +39,18 @@
                 Browser not supported
             </video>
         </div>
-        <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#model1" data-dismiss="collapse">Compare Text</button> 
-      </div>  
+        
+        <button type="submit" class="btn btn-default" >Compare Text</button>  
+    </div>  
       <div class="col-sm-3">
-            <textarea id="comments" cols="24" rows="13" placeholder="Edit Here" class="common"></textarea>
+        <div id="contact-form" >
+            <!-- <input type="text"  name ="edit" placeholder="Edit here" [(ngModel)] = "edit"> -->
+            <textarea rows="1" name="edit"  [(ngModel)] = "edit"></textarea>
+          </div>
 
       </div>
 
+</form>
     
 </div>
 

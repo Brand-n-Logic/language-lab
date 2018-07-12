@@ -1,4 +1,4 @@
-<div class="app">
+<!-- <div class="app">
     <div class="actions-holder">
         <button  id="buttonPlay" class="button button--play" disabled></button>
         <button (click)="recordAudio()" id="buttonRecord" class="button button--record"></button>
@@ -26,5 +26,7 @@
 
         <button class="track__button track__button--remove"></button>
     </div>
-</template>
+</template> -->
 
+<button [disabled]="isRecording" (click)="record()">Record</button>
+<button [disabled]="!isRecording" (click)="stop()">Stop</button>
