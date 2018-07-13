@@ -52,7 +52,7 @@ import { ContentfileComponent } from './sidebar/content/contentfile/contentfile.
 import { WebcontentComponent } from './sidebar/content/webcontent/webcontent.component';
 import { DemoproseComponent } from './sidebar/content/creamsoncontent/prosecontent/demoprose/demoprose.component';
 
-import { CrosswordComponent } from './sidebar/content/crossword/crossword.component';
+
 import { McqComponent } from './sidebar/content/mcq/mcq.component';
 import { UnseenComponent } from './sidebar/reading/unseen/unseen.component';
 import { LoginComponent } from './login/login.component';
@@ -81,8 +81,12 @@ import { TfComponent } from './sidebar/content/tf/tf.component';
 import { MatchthefollowingComponent } from './sidebar/content/matchthefollowing/matchthefollowing.component';
 import { FilltheblanksComponent } from './sidebar/content/filltheblanks/filltheblanks.component';
 
+
+
 import { SelfassesmentComponent } from './selfassesment/selfassesment.component';
 import { MyactivityComponent } from './myactivity/myactivity.component';
+import { SummaryComponent } from './summary/summary.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full'},
@@ -155,7 +159,7 @@ const routes: Routes = [
           { path: 'WebContent',           component: WebcontentComponent},
           // { path: 'Demoprose',            component: DemoproseComponent},
           { path: 'Assesment',            component: SelfassesmentComponent},
-          { path: 'Crossword',            component: CrosswordComponent},
+        
           { path: 'Unseen',               component: UnseenComponent},
           { path: 'Mcq',                  component: McqComponent},
 
@@ -171,15 +175,15 @@ const routes: Routes = [
           // { path: 'getContent/cid/2',  component: PoetryComponent},
           // { path: 'getContent/cid/3',  component: DramaComponent},
           { path: 'Assesment',            component: SelfassesmentComponent},
-          { path: 'Crossword',            component: CrosswordComponent},
+          
           { path: 'Unseen',               component: UnseenComponent},
           { path: 'getContent/cid/1/mcq',      component: McqComponent},
           { path: 'getContent/cid/1/tf',                  component: TfComponent},
           { path: 'getContent/cid/1/fib',                  component: FilltheblanksComponent},
           { path: 'getContent/cid/1/mtf',                  component: MatchthefollowingComponent},
           { path: 'Letsspeak',            component: LetsspeakComponent},
-          { path: 'Myactivity',            component: MyactivityComponent}
-
+          { path: 'Myactivity',            component: MyactivityComponent},
+          { path: 'Summary',            component: SummaryComponent}
           
           ];
 
@@ -228,7 +232,7 @@ const routes: Routes = [
     WebcontentComponent,
     DemoproseComponent,
     SelfassesmentComponent,
-    CrosswordComponent,
+   
     McqComponent,
     UnseenComponent,
     LoginComponent,
@@ -255,7 +259,8 @@ const routes: Routes = [
     MatchthefollowingComponent,
     FilltheblanksComponent,
     AComponent,
-    MyactivityComponent
+    MyactivityComponent,
+    SummaryComponent
   ],
   imports: [
     BrowserModule,
